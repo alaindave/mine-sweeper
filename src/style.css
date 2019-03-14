@@ -1,0 +1,57 @@
+.cell {
+  height: 50px;
+  width: 50px;
+  background-color: red;
+}
+
+#firstRow {
+  margin-bottom: 20px;
+  position: absolute;
+  left: 100px;
+  top: 100px;
+}
+
+#secondRow {
+  margin-bottom: 20px;
+  position: absolute;
+  left: 300px;
+  top: 100px;
+}
+
+#thirdRow {
+  position: absolute;
+  top: 100px;
+  left: 200px;
+}
+
+#cell1 {
+  margin-bottom: 20px;
+}
+
+#cell2 {
+  margin-bottom: 20px;
+}
+
+#cell4 {
+  margin-bottom: 20px;
+}
+
+#cell5 {
+  margin-bottom: 20px;
+}
+
+#cell6 {
+  margin-bottom: 20px;
+}
+
+#cell7 {
+  margin-bottom: 20px;
+}
+
+#cell8 {
+  margin-bottom: 20px;
+}
+
+#cell9 {
+  margin-bottom: 20px;
+}
