@@ -2,12 +2,15 @@ import React, { Component } from "react";
 import "../style.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
+const style = {
+  backgroundColor: red
+};
+
 export class Board extends Component {
-  state = {};
   render() {
     return (
       <div className="d-flex flex-column">
-        <h1>Board</h1>
+        <h1>Boards</h1>
         <div id="firstRow">
           <div id="cell1" className="cell" />
           <div id="cell2" className="cell" />
