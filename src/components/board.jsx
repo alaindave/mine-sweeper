@@ -1,30 +1,70 @@
 import React, { Component } from "react";
-import "../style.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-
-const style = {
-  backgroundColor: red
-};
+import "../style.css";
 
 export class Board extends Component {
+  red_cell = {
+    backgroundColor: "red",
+    height: "50px",
+    width: "50px"
+  };
+
+  green_cell = {
+    backgroundColor: "green",
+    height: "50px",
+    width: "50px"
+  };
+
+  constructor(props) {
+    super(props);
+    this.handleClick = this.handleClick.bind(this);
+    this.state = {
+      styles: this.red_cell,
+      clicked: 1
+    };
+  }
+
+  handleClick(e) {
+    this.setState({ clicked: e.target.id });
+  }
+
   render() {
     return (
       <div className="d-flex flex-column">
-        <h1>Boards</h1>
+        <p>Cell number {this.props.minedCell} is mined</p>
+        <p>You clicked {this.state.clicked}</p>
         <div id="firstRow">
-          <div id="cell1" className="cell" />
-          <div id="cell2" className="cell" />
-          <div id="cell3" className="cell" />
+          <button id="1" style={this.state.styles} onClick={this.handleClick}>
+            1
+          </button>
+          <button id="2" style={this.state.styles} onClick={this.handleClick}>
+            2
+          </button>
+          <button id="3" style={this.state.styles} onClick={this.handleClick}>
+            3
+          </button>
         </div>
         <div id="secondRow">
-          <div id="cell4" className="cell" />
-          <div id="cell5" className="cell" />
-          <div id="cell6" className="cell" />
+          <button id="4" style={this.state.styles} onClick={this.handleClick}>
+            4
+          </button>
+          <button id="5" style={this.state.styles} onClick={this.handleClick}>
+            5
+          </button>
+          <button id="6" style={this.state.styles} onClick={this.handleClick}>
+            6
+          </button>
         </div>
         <div id="thirdRow">
-          <div id="cell7" className="cell" />
-          <div id="cell8" className="cell" />
-          <div id="cell9" className="cell" />
+          <button id="7" style={this.state.styles} onClick={this.handleClick}>
+            7
+          </button>
+          <button id="8" style={this.state.styles} onClick={this.handleClick}>
+            8
+          </button>
+          <button id="9" style={this.state.styles} onClick={this.handleClick}>
+            9
+          </button>
         </div>
       </div>
     );
