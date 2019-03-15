@@ -1,8 +1,21 @@
-h1 {
-  color: black;
+#title {
+  font-weight: bold;
+  color: #660033;
 }
 
-p {
-  position: relative;
-  top: 10px;
+#intro {
+  color: goldenrod;
+}
+
+#won {
+  color: #b30000;
+}
+
+#score {
+  color: #66ff33;
+}
+
+.gameStatus {
+  color: rgb(71, 255, 71);
+  font-weight: normal;
 }
