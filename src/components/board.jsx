@@ -20,12 +20,19 @@ export class Board extends Component {
     this.handleClick = this.handleClick.bind(this);
     this.state = {
       styles: this.red_cell,
-      clicked: 1
+      clicked: 1,
+      currentStatus: "Keep playing..."
     };
   }
 
   handleClick(e) {
     this.setState({ clicked: e.target.id });
+    if (this.props.minedCell != e.target.id) {
+      //this.setState({ styles: this.green_cell });
+      e.target.style.backgroundColor = "green";
+    } else {
+      this.setState({ currentStatus: "You blew up!" });
+    }
   }
 
   render() {
@@ -33,6 +40,7 @@ export class Board extends Component {
       <div className="d-flex flex-column">
         <p>Cell number {this.props.minedCell} is mined</p>
         <p>You clicked {this.state.clicked}</p>
+        <p>{this.state.currentStatus}</p>
         <div id="firstRow">
           <button id="1" style={this.state.styles} onClick={this.handleClick}>
             1

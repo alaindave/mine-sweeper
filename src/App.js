@@ -8,7 +8,7 @@ class App extends Component {
     super(props);
     this.handleStart = this.handleStart.bind(this);
     this.state = {
-      randomCell: 1
+      randomCell: 0
     };
   }
   handleStart() {
